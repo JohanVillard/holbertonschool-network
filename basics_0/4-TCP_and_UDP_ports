@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 # This script displays listening ports with program information
-
-# Display TCP and UDP connections that are in LISTEN state
 sudo netstat -tulp
-
-# Display UNIX domain sockets that are listening
 sudo netstat -xlp 
