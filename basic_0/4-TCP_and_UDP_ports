@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Displays all listening ports
+# This script displays the listening ports, the pid and the name of the program to which each belongs
 sudo lsof -i -P -n | grep LISTEN
