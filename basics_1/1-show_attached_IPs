@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script displays all active IPv4 on the machine
+
+# Get a list of the name of each interfaces of the machine
+interfaces=$(ifconfig -a | grep -oP '^\w+')
+
+for interface in $interfaces; do
+    ip=$(ifconfig "$interface" | grep -oP 'inet \K[\d.]+')
+		if [[ -n "$ip" ]]; then
+			echo "$ip"
+		fi
+done

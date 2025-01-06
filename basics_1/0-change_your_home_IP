@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Configure an Ubuntu server with :
+# localhost resolves to 127.0.0.2
+# facebook.com resolves to 8.8.8.8
+
+# Change IP of the localhost
+sudo sh -c 'echo "127.0.0.2 localhost" >> /etc/hosts'
+
+# Change DNS of facebook
+sudo sh -c 'echo "8.8.8.8 facebook" >> /etc/hosts'
