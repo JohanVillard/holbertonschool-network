@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Configure an Ubuntu server with :
-echo "127.0.0.2 localhost" >> /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
+sudo sh -c 'echo "127.0.0.2 localhost" >> /etc/hosts'
+sudo sh -c 'echo "8.8.8.8 facebook.com" >> /etc/hosts'
