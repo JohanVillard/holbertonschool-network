@@ -2,11 +2,9 @@
 # Script that displays listening ports with program information
 
 # Display TCP and UDP connections that are in LISTEN state
-echo "Active Internet connections (only servers)"
 echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
-sudo netstat -tunlp | grep "LISTEN"
+sudo netstat -tulnp
 
 # Display UNIX domain sockets that are listening
-echo -e "\nActive UNIX domain sockets (only servers)"
 echo "Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Path"
-sudo netstat -xlp | grep "LISTEN"
+sudo netstat -xlp 
