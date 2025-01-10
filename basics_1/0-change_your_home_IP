@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-# fait une sauvegarde du fichier hosts dans hosts.backup
+# Manipulate hosts file
 cp /etc/hosts /etc/hosts.backup
-# supprime le contenue initial du fichier hosts
 echo -n > /etc/hosts
-# modifie l'adresse localhost
 echo "127.0.0.2 localhost" >> /etc/hosts
-# modifie l'adresse facebook.com
 echo "8.8.8.8 facebook.com" >> /etc/hosts
