@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# Configure an Ubuntu server with :
+# Make a save
 cp /etc/hosts /etc/hosts.backup
+# Delete content
 echo -n > /etc/hosts
+# Add new ip for localhost
 echo "127.0.0.2 localhost" >> /etc/hosts
+# Add new ip for facebook
 echo "8.8.8.8 facebook.com" >> /etc/hosts
