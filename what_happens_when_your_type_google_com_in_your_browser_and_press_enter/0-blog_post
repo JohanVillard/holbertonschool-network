@@ -1,0 +1,111 @@
+
+What Happens When You Type "https\://www\.google.com" and Press Enter?
+
+
+
+Ever wondered what goes on behind the scenes when you type a URL into your browser's address bar and hit Enter? The process is more complex than it might seem, involving multiple layers of technology working together seamlessly to deliver the webpage you requested. Let's break down the journey of your request step by step.
+
+
+
+1\. DNS Lookup
+
+
+
+When you type "https\://www\.google.com" into your browser, the first thing that happens is a DNS (Domain Name System) lookup. The DNS acts like the internet's phonebook, translating the human-readable domain name "www\.google.com" into an IP address that computers use to identify each other on the network. Your browser checks its cache for a recently retrieved IP address. If it's not found, the request is sent to a DNS server, which responds with the IP address for Google.
+
+
+
+2\. Establishing a Connection
+
+
+
+With the IP address in hand, your browser establishes a TCP (Transmission Control Protocol) connection with the Google server. This is done through a process called the three-way handshake, which ensures that both your computer and the server agree to communicate.
+
+
+
+The Three-Way Handshake:
+
+
+
+SYN: Your browser sends a SYN (synchronize) packet to the server.
+
+
+
+SYN-ACK: The server responds with a SYN-ACK (synchronize-acknowledge) packet.
+
+
+
+ACK: Your browser sends an ACK (acknowledge) packet back to the server.
+
+
+
+Once this handshake is complete, a connection is established.
+
+
+
+3\. Sending the HTTP Request
+
+
+
+With the connection established, your browser sends an HTTP (Hypertext Transfer Protocol) or HTTPS (HTTP Secure) request to the Google server, asking for the webpage. This request includes headers with information like the type of browser you are using, what kind of content you can accept, and more.
+
+
+
+4\. Server Processing
+
+
+
+The Google server processes your request. It determines what content to send back, which may involve querying a database, running some backend code, or fetching static files. Google uses a load balancer to distribute incoming requests to different servers to ensure efficiency and reliability.
+
+
+
+5\. Sending the Response
+
+
+
+Once the server has the content ready, it sends back an HTTP response. If the connection is secure, the data is encrypted using SSL/TLS (Secure Sockets Layer/Transport Layer Security) to ensure privacy and data integrity. This response includes headers and the requested HTML content of the page.
+
+
+
+6\. Rendering the Page
+
+
+
+Your browser receives the response and begins to render the page. It processes the HTML, CSS, and JavaScript files included in the response to construct the web page. This involves building the Document Object Model (DOM), applying styles, and executing any scripts.
+
+
+
+Key Steps in Rendering:
+
+
+
+Parsing HTML: Your browser parses the HTML to build the DOM tree.
+
+
+
+Fetching Resources: It requests additional resources like images, stylesheets, and JavaScript files.
+
+
+
+Executing JavaScript: JavaScript code is executed, which might manipulate the DOM further.
+
+
+
+Layout and Painting: The browser calculates the layout and paints the pixels on the screen.
+
+
+
+7\. User Interaction
+
+
+
+Finally, the fully rendered web page is displayed to you, allowing you to interact with it. Your browser continues to listen for any further user actions, such as clicks or form submissions, sending additional requests to the server as needed.
+
+
+
+Conclusion
+
+
+
+The process of loading a web page involves a complex interplay of multiple systems and protocols, all designed to work together to deliver content quickly and efficiently. The next time you type a URL into your browser, you'll know the intricate dance of technology that happens to bring that page to life!
+
